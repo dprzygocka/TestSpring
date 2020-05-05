@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Car</title>
+</head>
+<body>
+<input type="hidden" name="${car.car_id}"><br>
+<input type="text" name="${car.brand}"><br>
+<input type="text" th:value="${car.model}"><br>
+<input type="text" th:value="${car.plate}"><br>
+<input type="text" th:value="${car.regDate}"><br>
+<input type="text" th:value="${car.odometer}"><br>
+<input type="text" th:value="${car.fuelType}"><br>
+<input type="text" th:value="${car.type_id}"><br>
+<input type="submit" value="Submit">
+</body>
+</html>

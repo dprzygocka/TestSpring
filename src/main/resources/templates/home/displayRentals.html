@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Table of Rentals</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Rental Id</th>
+        <th>From Date</th>
+        <th>From Time</th>
+        <th>To Date</th>
+        <th>To Time</th>
+        <th>Max KM</th>
+        <th>Odometer</th>
+        <th>Customer Id</th>
+        <th>Car Id</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rental: ${rentals}">
+        <td th:text="${rental.rental_id}"/>
+        <td th:text="${rental.fromDate}"/>
+        <td th:text="${rental.fromTime}"/>
+        <td th:text="${rental.toDate}"/>
+        <td th:text="${rental.toTime}"/>
+        <td th:text="${rental.maxKM}"/>
+        <td th:text="${rental.km}"/>
+        <td th:text="${rental.customer_id}"/>
+        <td th:text="${rental.car_id}"/>
+        <td>
+            <a th:href="@{'/deleteRental/'+${rental.rental_id}}">
+                <button>Delete</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{'/updateRental/'+${rental.rental_id}}">
+                <button>Update</button>
+            </a>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>l>

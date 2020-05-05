@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Customer</title>
+</head>
+<body>
+<form action="/updateCustomer" method="POST">
+    <input type="hidden" name="customer_id" th:value="${customer.customer_id}"><br>
+    <input type="text" name="firstName" th:value="${customer.firstName}"><br>
+    <input type="text" name="lastName" th:value="${customer.lastName}"><br>
+    <input type="text" name="mobilePhone" th:value="${customer.mobilePhone}"><br>
+    <input type="text" name="email" th:value="${customer.email}"><br>
+    <input type="text" name="driverLicenceNumber" th:value="${customer.driverLicenceNumber}"><br>
+    <input type="text" name="driverSinceDate" th:value="${customer.driverSinceDate}"><br>
+    <input type="text" name="address_id" th:value="${customer.address_id}"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

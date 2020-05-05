@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contract Details</title>
+</head>
+<body>
+<p>Customer Address</p>
+<form action="/createAddress" method="POST" autocomplete="on">
+    <input type="text" id="streetName" name="streetName" placeholder="Street Name"><br>
+    <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code"><br>
+    <input type="text" id="city" name="city" placeholder="city"><br>
+    <input type="submit" value="Submit">
+</form>
+<p>Customer Details</p>
+<form action="/createCustomer" method="POST" autocomplete="on">
+    <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
+    <input type="text" id="mobilePhone" name="mobilePhone" placeholder="Mobile Phone"><br>
+    <input type="text" id="email" name="email" placeholder="Email"><br>
+    <input type="text" id="driverLicenceNumber" name="driverLicenceNumber" placeholder="Driver Licence Number"><br>
+    <input type="text" id="driverSinceDate" name="driverSinceDate" placeholder="Driver Since Date"><br>
+    <input type="text" id="address_id" name="address_id" placeholder="Address ID"><br>
+    <input type="submit" value="Submit">
+</form>
+<p>New Car details</p>
+<form action="/createCar" method="POST" autocomplete="on">
+    <input type="text" id="brand" name="brand" placeholder="Brand"><br>
+    <input type="text" id="model" name="model" placeholder="Model"><br>
+    <input type="text" id="plate" name="plate" placeholder="Plate"><br>
+    <input type="text" id="regDate" name="regDate" placeholder="Registration Date"><br>
+    <input type="text" id="odometer" name="odometer" placeholder="Odometer"><br>
+    <input type="text" id="fuelType" name="fuelType" placeholder="Brand"><br>
+    <input type="text" id="type_id" name="type_id" placeholder="Type ID"><br>
+    <input type="submit" value="Submit">
+</form>
+<p>New Rental details</p>
+<form action="/createRental" method="POST" autocomplete="on">
+    <input type="text" id="fromDate" name="fromDate" placeholder="From Date"><br>
+    <input type="text" id="fromTime" name="fromTime" placeholder="From Time"><br>
+    <input type="text" id="toDate" name="toDate" placeholder="To Date"><br>
+    <input type="text" id="toTime" name="toTime" placeholder="To Time"><br>
+    <input type="text" id="maxKM" name="maxKM" placeholder="Max KM"><br>
+    <input type="text" id="km" name="km" placeholder="Odometer"><br>
+    <input type="text" id="customer_id" name="customer_id" placeholder="Customer ID"><br>
+    <input type="text" id="car_id" name="car_id" placeholder="Car ID"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

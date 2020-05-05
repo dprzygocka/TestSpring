@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Table of Cars</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Car ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Plate</th>
+        <th>Registration Date</th>
+        <th>Odometer</th>
+        <th>Fuel Type</th>
+        <th>Type ID</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.car_id}";/>
+        <td th:text="${car.brand}";/>
+        <td th:text="${car.model}";/>
+        <td th:text="${car.plate}";/>
+        <td th:text="${car.regDate}";/>
+        <td th:text="${car.odometer}";/>
+        <td th:text="${car.fuelType}";/>
+        <td th:text="${car.type_id}";/>
+        <td>
+            <a th:href="@{'/deleteCar/'+${car.car_id}}">
+                <button>Delete</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{'/updateCar/'+${car.car_id}}">
+                <button>Update</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

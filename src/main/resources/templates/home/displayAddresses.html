@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Addresses Table</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Address Id</th>
+        <th>Street Name</th>
+        <th>Zip Code</th>
+        <th>City</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="address: ${addresses}">
+        <td th:text="${address.address_id}" />
+        <td th:text="${address.streetName}" />
+        <td th:text="${address.zipCode}" />
+        <td th:text="${address.city}" />
+            <td>
+                <a th:href="@{'/deleteAddress/'+${address.address_id}}">
+                    <button>Delete</button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/updateAddress/'+${address.address_id}}">
+                    <button>Update</button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

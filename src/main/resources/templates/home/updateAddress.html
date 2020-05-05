@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Address</title>
+</head>
+<body>
+<form action="/updateAddress" method="POST">
+    <input type="hidden" name="address_id" th:value="${address.address_id}"><br>
+    <input type="text" name="streetName" th:value="${address.streetName}"><br>
+    <input type="text" name="zipCode" th:value="${address.zipCode}"><br>
+    <input type="text" name="city" th:value="${address.city}"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

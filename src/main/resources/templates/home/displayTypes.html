@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Types of Cars</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Type Id</th>
+        <th>Engine</th>
+        <th>Gear Type</th>
+        <th>Cruise Control</th>
+        <th>Number Of Seats</th>
+        <th>Seats Type</th>
+        <th>Air Condition</th>
+        <th>Horse Power</th>
+        <th>Type Name</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="type: ${types}">
+        <td th:text="${type.type_id}"/>
+        <td th:text="${type.engine}"/>
+        <td th:text="${type.gearType}"/>
+        <td th:text="${type.cruiseControl}"/>
+        <td th:text="${type.numberOfSeats}"/>
+        <td th:text="${type.seatsType}"/>
+        <td th:text="${type.airCon}"/>
+        <td th:text="${type.hp}"/>
+        <td th:text="${type.typeName}"/>
+        <td>
+            <a th:href="@{'/deleteType/'+${type.type_id}}">
+                <button>Delete</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

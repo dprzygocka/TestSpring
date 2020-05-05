@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Type</title>
+</head>
+<body>
+<form action="/updateRental" method="POST">
+    <input type="hidden" th:value="${rental.rental_id}"/>
+    <input type="text" th:value="${rental.fromDate}"/>
+    <input type="text" th:value="${rental.fromTime}"/>
+    <input type="text" th:value="${rental.toDate}"/>
+    <input type="text" th:value="${rental.toTime}"/>
+    <input type="text" th:value="${rental.maxKM}"/>
+    <input type="text" th:value="${rental.km}"/>
+    <input type="text" th:value="${rental.customer_id}"/>
+    <input type="text" th:value="${rental.car_id}"/>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body{
+    font-family:arial,sans-serif;
+}
+header{
+    background-color: rgb(100,100,100);
+    color:white;
+    text-transform:uppercase;
+    text-align:center;
+    padding: 10px;
+}
+ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    background-color:rgb(100,100,100);
+}
+li{
+    float:left;
+}
+li a{
+    text-decoration:none;
+    display:block;
+    color:white;
+    test-align:center;
+    padding:10px 15px;
+}
+li a:hover{
+    background-color:black;
+}
